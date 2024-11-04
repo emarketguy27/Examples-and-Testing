@@ -97,8 +97,8 @@ a {
   opacity: 0.7;
 }
 [theme="high"] {
-  --color-bg: #0c0f24ea;
-  --color-fg: #889468e7;
+  --color-bg: #0c0f247a;
+  --color-fg: #000000;
   --color-border: #dacfcfd7;
   opacity: 0.5;
 }
@@ -114,8 +114,10 @@ body.mid-theme {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 2em 3em;
+  align-items: center;
+  padding: 0 3em;
   border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-border);
 }
 .select {
   font-size: 12px;
