@@ -1,0 +1,234 @@
+/***** MODERN CSS RESET RULES ****/
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+[data-theme="dark"] {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+}
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-fg: #000000;
+}
+[theme="low"] {
+  --color-bg: #0c0f24ea;
+  --color-fg: #889468e7;
+}
+[theme="mid"] {
+  --color-bg: #7079acc0;
+  --color-fg: #3f4e52b7;
+}
+[theme="high"] {
+  --color-bg: #b9bac2e1;
+  --color-fg: #3f4e52;
+}
+/***** MAIN STYLES *****/
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+body.mid-theme {
+  background-color: #242424 !important;
+  color: coral !important;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 3em;
+  border-bottom: 1px solid;
+}
+.select {
+  box-shadow: 0 -2px 5px 0px #fefefe, 0 2px 5px 0 #ccc;
+  background: rgb(110, 115, 237);
+  background: -webkit-linear-gradient(
+    top,
+    #ddd 0%,
+    #ddd 30%,
+    #eee 82%,
+    #efefef 100%
+  );
+  background: -moz-linear-gradient(
+    top,
+    #ddd 0%,
+    #ddd 30%,
+    #eee 82%,
+    #efefef 100%
+  );
+  background: linear-gradient(top, #ddd 0%, #ddd 30%, #eee 82%, #efefef 100%);
+  border: solid 3px #c5c5c5;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: hand;
+}
+
+.selected {
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    #fff 0%,
+    #03f0c1 80%,
+    #1daee6 100%
+  );
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    #fff 0%,
+    #03f0c1 80%,
+    #1daee6 100%
+  );
+  background: radial-gradient(
+    center,
+    ellipse cover,
+    #fff 0%,
+    #03f0c1 80%,
+    #1daee6 100%
+  );
+  box-shadow: inset 0 1px 1px 0 #fff, inset 0 -1px 1px 0 #fff,
+    0 0 2px 1px #74f9ff;
+  border: solid 1px #05d6b5;
+}
+
+.one {
+  position: absolute;
+  left: -10px;
+  top: 0px;
+}
+
+.two {
+  position: absolute;
+  top: -17px;
+  left: 22px;
+}
+
+.three {
+  position: absolute;
+  top: 0px;
+  left: 56px;
+}
+.switch-container {
+  position: relative;
+  /* margin: 50px; */
+  border-radius: 50%;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(#ece9e948, #cacaca 30%, #f4f4f456, #535353 153%);
+}
+
+.switch {
+  border-radius: 50%;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  bottom: 7px;
+  right: 7px;
+  margin: 0px;
+  background: linear-gradient(
+    90deg,
+    #636068,
+    #242424 43%,
+    #474747 44%,
+    #474747 56%,
+    #7a7a7a 57%,
+    #5a5a5a 68%
+  );
+  box-shadow: inset 0 1px 1px 1px #39373c, 0 0 1px 1px #69696a;
+  border: solid 1px #7e7e7e;
+  /* transition: .5s; */
+}
+
+.switch:hover {
+  transform: rotate(-25deg);
+}
+
+.switch:before {
+  display: block;
+  content: "";
+  width: 2px;
+  height: 35%;
+  background: #fff;
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.12);
+  margin: 5px auto;
+}
+.main-container {
+  padding: 2em;
+}
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+}
+#themeToggle {
+  cursor: pointer;
+}
+button img {
+  background-color: rgb(255, 0, 0);
+}
