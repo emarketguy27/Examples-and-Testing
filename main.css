@@ -52,6 +52,7 @@ h6 {
 /* 8. Improve line wrapping */
 p {
   text-wrap: pretty;
+  font-size: 1.2rem;
 }
 h1,
 h2,
@@ -70,25 +71,33 @@ h6 {
   isolation: isolate;
 }
 
+a {
+  text-decoration: none;
+}
 [data-theme="dark"] {
   --color-bg: #000000;
   --color-fg: #ffffff;
+  --color-border: #242424e1;
 }
 [data-theme="light"] {
   --color-bg: #ffffff;
   --color-fg: #000000;
+  --color-border: #24242431;
 }
 [theme="low"] {
   --color-bg: #0c0f24ea;
   --color-fg: #889468e7;
+  --color-border: #dacfcf10;
 }
 [theme="mid"] {
   --color-bg: #7079acc0;
   --color-fg: #3f4e52b7;
+  --color-border: #dacfcf4f;
 }
 [theme="high"] {
   --color-bg: #b9bac2e1;
   --color-fg: #3f4e52;
+  --color-border: #dacfcfd7;
 }
 /***** MAIN STYLES *****/
 body {
@@ -103,7 +112,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 2em 3em;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid var(--color-border);
 }
 .select {
   font-size: 12px;
@@ -229,14 +238,22 @@ header {
 .main-container {
   padding: 2em;
 }
-button {
-  border: none;
+a.button {
+  margin-top: 2rem;
+  border: 1px solid;
+  color: var(--color-fg);
+  opacity: 0.6;
+  padding: .5rem 1.5rem;
   border-radius: 5px;
   background: transparent;
-  /* padding: 12px; */
+  &:hover {
+    opacity: 1;
+  }
 }
 #themeToggle {
   cursor: pointer;
+  background: transparent;
+  border: none;
 }
 button img {
   background-color: rgb(255, 0, 0);
