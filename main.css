@@ -88,16 +88,19 @@ a {
   --color-bg: #0c0f24ea;
   --color-fg: #889468e7;
   --color-border: #dacfcf10;
+  opacity: 0.9;
 }
 [theme="mid"] {
-  --color-bg: #7079acc0;
-  --color-fg: #3f4e52b7;
+  --color-bg: #0c0f24ea;
+  --color-fg: #889468e7;
   --color-border: #dacfcf4f;
+  opacity: 0.7;
 }
 [theme="high"] {
-  --color-bg: #b9bac2e1;
-  --color-fg: #3f4e52;
+  --color-bg: #0c0f24ea;
+  --color-fg: #889468e7;
   --color-border: #dacfcfd7;
+  opacity: 0.5;
 }
 /***** MAIN STYLES *****/
 body {
